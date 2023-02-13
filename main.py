@@ -24,7 +24,7 @@ def craft():
 
 	def error_win():
 		messagebox.showinfo('Произошла ошибка!', 'Система создания недоделаная! \nЖди обнову на гитхаб')
-		
+
 	craft = Tk()
 	craft.geometry('330x70')
 	craft.resizable(width=0, height=0)
@@ -44,8 +44,8 @@ def help():
 	help.title("ПКСГ (Помощь)")
 	help.geometry('360x160')
 	help.resizable(width=0, height=0)
-	label = Label(text="Отправляйте баги на гитхаб")
-	ghlink = Label(text="https://github.com/dttric/PCSG")
+	label = Label(help, text="Отправляйте баги на гитхаб")
+	ghlink = Label(help, text="https://github.com/dttric/PCSG")
 	label.pack()
 	ghlink.pack()
 	help.mainloop()
