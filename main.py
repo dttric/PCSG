@@ -3,9 +3,9 @@ from tkinter import messagebox
 from time import sleep
 from tkinter.ttk import Combobox  
 import sys
-
+import os
 # items
-wood = 0
+wood_res = 0
 planks = 0
 home = 0
 w_pickaxe = 0
@@ -17,6 +17,9 @@ def exit():
 
 def error_win():
 	messagebox.showinfo('Произошла ошибка!', 'Чет не работает \nЖди обнову на гитхаб') 
+
+def wood():
+	messagebox.showinfo('Произошла ошибка блять!',"Сейчас добыча дерева не является возможной поэтому я замораживаю проект на гитхабе =(\n\nP.S.(14.02.23):\nВсех с днем расстрела Чикатило")
 
 def craft():
 	def craft_process():
@@ -58,7 +61,7 @@ welcome = Label(text="Добро Пожаловать в ПКСГ 1.5")
 wtuwd = Label(text="Что вы хотите делать?")
 craft = Button(root, text="крафт", command=craft)
 mine = Button(root, text="шахта", command=error_win)
-wood = Button(root, text="лес", command=error_win)
+wood = Button(root, text="лес", command=wood)
 check = Button(root, text="проверка ресов", command=error_win)
 help = Button(root, text="помощь", command=help)
 exit = Button(root, text="выход (без сохранения)", command=exit)
